@@ -6,11 +6,9 @@ function diaDaSemana(){
     return listaDeDias[timeFixed%7]; //returning day of the week based on OS
 }
 
-function materiasAEstudar(dict, dia){
-    return dict[`${dia}`]; //return subjects from "materias" 
+function materiasAEstudar(dict){
+    return dict[`${diaDaSemana()}`]; //return subjects from "materias" 
 }
-
-let dia = diaDaSemana();
 
 let materias = {
     Quinta: "Matemática, Filosofia e Sociologia",
@@ -22,5 +20,5 @@ let materias = {
     Quarta: "Química e Português"
 };
 
-console.log(`As matérias que você tem que estudar hoje, ${diaDaSemana()}, são:\n${materiasAEstudar(materias, dia)}`);
+console.log(`As matérias que você tem que estudar hoje, ${diaDaSemana()}, são:\n${materiasAEstudar(materias)}`);
 
